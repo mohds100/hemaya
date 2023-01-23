@@ -2,50 +2,58 @@
 use Phppot\Member;
 
 if (! empty($_POST["login-btn"])) {
-    require_once __DIR__ . '/Model/Member.php';
+    require_once __DIR__ . '/Model/User.php';
     $member = new Member();
     $loginResult = $member->loginMember();
 }
 ?>
-<HTML>
-<HEAD>
-<TITLE>Login</TITLE>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"/>
+    <link rel="stylesheet" href="./styles.css" />
+    <title>تسجيل الدخول </title>
+</head>
+<body>
+    <!-- navber -->
+    <nav>
+     <div class="logo">
+     <i class="fas fa-camera-retro"></i>
+     <h4>حماية</h4></div>
+     <ul class="nav-items">
+     <li class="nav-item">
+    </nav>
 <link href="assets/css/phppot-style.css" type="text/css"
 	rel="stylesheet" />
-<link href="assets/css/user-registration.css" type="text/css"
-	rel="stylesheet" />
-<script src="vendor/jquery/jquery-3.3.1.js" type="text/javascript"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="assets/css/user-registration.css" type="text/css"rel="stylesheet" />
 <style>
-	body{
-        background-image:url("./assets/.jpg");
-        background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-    }
+	
 .sign-up-container{
-  background-image: linear-gradient(to right, #ff0030 , #790975);
+  background-image: linear-gradient(to right, #fffacd  , #fffacd );
 }
 .form-label{
-color:white !important;
+color:#512b11 !important;
 }
 #login-btn{
-	color:white;
+	color:#512b11;
 	font-weight:bold;
-	background: #343a40;
+	background: #765;
 }
 </style>
-</HEAD>
-<BODY>
 	<div class="phppot-container">
 		<div class="sign-up-container">
 			<div class="login-signup">
-				<a href="user-registration.php" style="color:white;">التسجيل</a>
+				<a href="user-registration.php" style="color:#512b11;">التسجيل</a>
 			</div>
 			<div class="signup-align">
 				<form name="login" action="" method="post"
 					onsubmit="return loginValidation()">
-					<div class="signup-heading"  style="color:white;">تسجيل الدخول</div>
+					<div class="signup-heading"  style="color:#512b11;">تسجيل الدخول</div>
 				<?php if(!empty($loginResult)){?>
 				<div class="error-msg"><?php echo $loginResult;?></div>
 				<?php }?>
@@ -75,7 +83,6 @@ color:white !important;
 			</div>
 		</div>
 	</div>
-
 	<script>
 function loginValidation() {
 	var valid = true;
@@ -106,3 +113,12 @@ function loginValidation() {
 </script>
 </BODY>
 </HTML>
+<!-- footer -->	
+<footer>
+<div class="footer-section">
+<p>جميع الحقوق محفوظة لموقع حماية 2023</p>
+<p>للتواصل 0560349555</p>
+</div>
+</footer>
+</body>
+</html>

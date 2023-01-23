@@ -1,4 +1,4 @@
-<?php
+    <?php
 session_start();
 if (isset($_SESSION["username"])) {
     $username = $_SESSION["username"];
@@ -12,35 +12,87 @@ if (isset($_SESSION["username"])) {
     $url = "./index_log.php";
     header("Location: $url");
 }
-
 ?>
-<HTML>
-<HEAD>
-<TITLE>Welcome</TITLE>
-<link href="assets/css/phppot-style.css" type="text/css"
-	rel="stylesheet" />
-<link href="assets/css/user-registration.css" type="text/css"
-	rel="stylesheet" />
-    <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<style>
-    body{
-        background-image:url("./assets/bg.jpg");
-        background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-    }
-</style>
-</HEAD>
-<BODY>
-    <!-- <img src="./assets/bg.jpg" alt=""> -->
-	<div class="phppot-container" >
-        <div class="col btn btn-danger" style="margin-top:5% !important;"> <a href="index.html" style="color:white">موقع كاميرات المراقبة</a>  </div><div class="page-header">
-		</div>
-		<div class="page-content jumbotron" style="  background-color: red;
-  background-image: linear-gradient(to right, darkgoldenrod , purple);">
-  <h4 style="color:white; font-weight:bold;">اهلا بك  <?php echo $username;?></h4></div>
-  <span class="login-signup btn btn-warning"><a href="logout.php" style="color:white">تسجيل الخروج</a></span>
-	</div>
-</BODY>
-</HTML>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"/>
+    <link rel="stylesheet" href="./styles.css" />
+    <title>موقع حماية</title>
+</head>
+<body>
+    <!-- navber -->
+    <nav>
+     <div class="logo">
+     <i class="fas fa-camera-retro"></i>
+     <h4>حماية</h4></div>
+     <ul class="nav-items">
+     <li class="nav-item">
+     <a href="home.php" class="nav-link"> الرئيسية</a></li>
+     <ul class="nav-items">
+     <li class="nav-item">
+     <a href="ibout.html" class="nav-link">عنا </a></li>
+     <ul class="nav-items">
+     <li class="nav-item">
+     <a href="server.html" class="nav-link">الخدمات </a></li>
+     <ul class="nav-items"><li class="nav-item">
+     <a href="prod.html" class="nav-link">المنتجات</a></li>
+     <ul class="nav-items">
+     <li class="nav-item">
+     <a href="#" class="nav-link">الشراء </a></li>
+     <ul class="nav-items">
+     <li class="nav-item">
+     <a href="user-registration.php" class="nav-link">التسجيل </a></li>
+     <a href="login.php" class="nav-link">تسجيل الدخول  </a></li>
+     <ul class="nav-items">
+      <li class="nav-item">
+     <a href="logout.php" class="nav-link">تسجيل الخروج  </a></li>
+     </nav>
+     <BODY>
+  <div class="page-content jumbotron">
+    <h3 style="color:#512b11; font-weight:bold;">اهلا<?php echo $username;?></h3></div>
+    </div>	
+  </BODY>
+        <!--hero section -->
+    <section class="--hero">
+    <div class="hero-section">
+    <div class="content">
+    <h4>اهلا بك في موقع حماية لكاميرات مراقبة المنازل والسيارات</h4>
+     <!-- What's New Section -->
+     <section class="home-bage" id="bage">
+        <div class="bage-section">
+          <div class="bage">
+            <div class="bage">
+              
+            <img width="200" height="200" src="./imge/prod.png" /><br>
+            <a href="prod.html" class=""><h2>المنتجات</h2></a></div>
+          <div class="bage">
+            <img width="200" height="200" src="./imge/trk.png" /><br>
+            <a href="trk.html" class=""><h2>التركيب</h2></a></div>
+          <div class="bage">
+            <img width="200" height="200" src="./imge/snn.png" /><br>
+            <a href="./sunh.html" class=""><h2>الصيانة</h2></a></div>
+            
+                
+        </div>
+      </section>
+    </div>
+</section>
+<!-- footer -->
+<br> <br><br><br>
+<br><br><br><br>
+<footer>
+<div class="footer-section">
+<p>جميع الحقوق محفوظة لموقع حماية  2023</p>
+<p>للتواصل 0560349555</p>
+</div>
+</footer>
+</body>
+</html>

@@ -1,38 +1,48 @@
 <?php
 use Phppot\Member;
 if (! empty($_POST["signup-btn"])) {
-    require_once './Model/Member.php';
+    require_once './Model/User.php';
     $member = new Member();
     $registrationResponse = $member->registerMember();
 }
 ?>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"/>
+    <link rel="stylesheet" href="./styles.css" />
+    <title>التسجيل</title>
+</head>
+<body>
+    <!-- navber -->
+    <nav>
+     <div class="logo">
+     <i class="fas fa-camera-retro"></i>
+     <h4>حماية</h4></div>
+     <ul class="nav-items">
+     <li class="nav-item">
+    </nav>
 <HTML>
 <HEAD>
-<TITLE>User Registration</TITLE>
-<link href="assets/css/phppot-style.css" type="text/css"
-	rel="stylesheet" />
-<link href="assets/css/user-registration.css" type="text/css"
-	rel="stylesheet" />
+<TITLE>التسجيل</TITLE>
 <script src="vendor/jquery/jquery-3.3.1.js" type="text/javascript"></script>
 </HEAD>
 <style>
-	
-		body{
-        background-image:url("./assets/.jpg");
-        background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-    }
 .sign-up-container{
-  background-image: linear-gradient(to right, #790975,#ff0030);
+  background-image: linear-gradient(to right, #fffacd,#fffacd);
 }
 .form-label{
-color:white !important;
+color:#512b11 !important;
 }
 #signup-btn{
-	color:white;
+	color:#512b11;
 	font-weight:bold;
-	background: #343a40;
+	background: #765;
 }
 </style>
 <html dir="rtl">
@@ -41,12 +51,12 @@ color:white !important;
 	<div class="phppot-container">
 		<div class="sign-up-container">
 			<div class="login-signup">
-				<a href="index_log.php" style="color:white">تسجيل الدخول</a>
+				<a href="index_log.php" style="color:#512b11">تسجيل الدخول</a>
 			</div>
 			<div class="">
 				<form name="sign-up" action="" method="post"
 					onsubmit="return signupValidation()">
-					<div class="signup-heading" style="color:white">التسجيل</div>
+					<div class="signup-heading" style="color:#512b11">التسجيل</div>
 				<?php
     if (! empty($registrationResponse["status"])) {
         ?>
@@ -165,3 +175,11 @@ function signupValidation() {
 </script>
 </BODY>
 </HTML>
+<!-- footer -->
+<footer>
+<div class="footer-section">
+<p>جميع الحقوق محفوظة لموقع حماية 2023</p>
+</div>
+</footer>
+</body>
+</html>
